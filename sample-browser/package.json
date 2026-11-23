@@ -1,0 +1,26 @@
+{
+  "name": "sample_browser",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Sample Browser, a LUNA Add On built with @uaudio/luna-builder-sdk",
+  "scripts": {
+    "vendor": "node -e \"const fs=require('fs');fs.mkdirSync('vendor',{recursive:true});fs.copyFileSync('node_modules/@uaudio/luna-builder-sdk/sdk/luna.global.js','vendor/luna.global.js')\"",
+    "postinstall": "npm run vendor",
+    "prebuild": "npm run vendor",
+    "build": "tsc && vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "serve": "ua-builder serve",
+    "install-addon": "npm run build && ua-builder install",
+    "pack": "npm run build && ua-builder pack"
+  },
+  "devDependencies": {
+    "@uaudio/luna-builder-sdk": "file:../../../.claude/plugins/cache/luna-builder-sdk/ua-luna-builder/3.1.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  }
+}

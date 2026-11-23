@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output (npm run build)
+dist/
+*.tsbuildinfo
+
+# Vendored SDK bundle, copied from node_modules by `npm install` / `npm run build`
+vendor/
+
+# Packaged Add Ons (npm run pack)
+*.lunaaddon
+
+# Test and tool output
+coverage/
+*.log
+
+# Local secrets and OS clutter
+.env
+.env.*
+.DS_Store

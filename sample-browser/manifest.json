@@ -1,0 +1,13 @@
+{
+    "package_name": "Sample Browser",
+    "id": "com.example.sample_browser",
+    "title": "Sample Browser",
+    "version": "0.1.0",
+    "description": "Browse folders of samples, audition them, and drag or import them into the session.",
+    "categories": ["Import & Export"],
+    "sdk_version": "3.1.2",
+    "min_luna_version": "3.1.2",
+    "engines": ["luna"],
+    "html": "index.html",
+    "target": "browser"
+}
